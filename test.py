@@ -2,12 +2,6 @@ import face_recognition
 import cv2
 import numpy as np
 
-# This is a demo of blurring faces in video.
-
-# PLEASE NOTE: This example requires OpenCV (the `cv2` library) to be installed only to read from your webcam.
-# OpenCV is *not* required to use the face_recognition library. It's only required if you want to run this
-# specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
-
 # Get a reference to webcam #0 (the default one)
 ipc_rtsp = 'rtsp://admin:a1234567@192.168.10.45:554'
 video_capture = cv2.VideoCapture(ipc_rtsp)
@@ -65,11 +59,6 @@ while True:
             # See if the face is a match for the known face(s)
             matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
             name = "Unknown"
-
-            # # If a match was found in known_face_encodings, just use the first one.
-            # if True in matches:
-            #     first_match_index = matches.index(True)
-            #     name = known_face_names[first_match_index]
 
             # Or instead, use the known face with the smallest distance to the new face
             face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
