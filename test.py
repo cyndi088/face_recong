@@ -13,17 +13,17 @@ ipc_rtsp = 'rtsp://admin:a1234567@192.168.10.45:554'
 video_capture = cv2.VideoCapture(ipc_rtsp)
 
 # Load a sample picture and learn how to recognize it.
-han_image = face_recognition.load_image_file("han.jpg")
+han_image = face_recognition.load_image_file("face_lib/han.jpg")
 han_face_encoding = face_recognition.face_encodings(han_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-wu_image = face_recognition.load_image_file("wu.jpg")
+wu_image = face_recognition.load_image_file("face_lib/wu.jpg")
 wu_face_encoding = face_recognition.face_encodings(wu_image)[0]
 
-ding_image = face_recognition.load_image_file("517141328540745172.jpg")
+ding_image = face_recognition.load_image_file("face_lib/517141328540745172.jpg")
 ding_face_encoding = face_recognition.face_encodings(ding_image)[0]
 
-zheng_image = face_recognition.load_image_file("20190809172226.jpg")
+zheng_image = face_recognition.load_image_file("face_lib/20190809172226.jpg")
 zheng_face_encoding = face_recognition.face_encodings(zheng_image)[0]
 
 # Create arrays of known face encodings and their names
